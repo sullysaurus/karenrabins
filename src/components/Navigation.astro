@@ -6,26 +6,65 @@ interface Props {
 const { currentPage } = Astro.props;
 ---
 
-<div class="flex flex-col gap-4">
-  <!-- Logo/Brand Row -->
-  <div class="flex items-center justify-center sm:justify-start space-x-3">
-    <div class="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-full flex items-center justify-center">
-      <span class="text-white font-bold text-lg">KR</span>
+<nav class="relative">
+  <!-- Header with Logo and Hamburger -->
+  <div class="flex items-center justify-between">
+    <!-- Logo/Brand -->
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-full flex items-center justify-center">
+        <span class="text-white font-bold text-lg">KR</span>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-gray-900">Karen Rabins, LCSW</h1>
+        <p class="text-sm text-gray-600">Licensed Clinical Social Worker</p>
+      </div>
     </div>
-    <div class="text-center sm:text-left">
-      <h1 class="text-xl font-bold text-gray-900">Karen Rabins, LCSW</h1>
-      <p class="text-sm text-gray-600">Licensed Clinical Social Worker</p>
+    
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="/" class={currentPage === 'home' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium'}>Home</a>
+      <a href="/about" class={currentPage === 'about' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium'}>About Karen</a>
+      <a href="/services" class={currentPage === 'services' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium'}>Services</a>
+      <a href="/ketamine-therapy" class={currentPage === 'ketamine' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium'}>Ketamine Therapy</a>
+      <a href="/contact" class={`bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors font-medium ${currentPage === 'contact' ? 'ring-2 ring-emerald-300' : ''}`}>Contact</a>
     </div>
+    
+    <!-- Mobile Hamburger Button -->
+    <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700 hover:text-emerald-700 focus:outline-none" aria-label="Toggle mobile menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
   
-  <!-- Navigation Row -->
-  <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-end gap-3 sm:gap-6">
-    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-      <a href="/" class={currentPage === 'home' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1 whitespace-nowrap' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium whitespace-nowrap'}>Home</a>
-      <a href="/about" class={currentPage === 'about' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1 whitespace-nowrap' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium whitespace-nowrap'}>About</a>
-      <a href="/services" class={currentPage === 'services' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1 whitespace-nowrap' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium whitespace-nowrap'}>Services</a>
-      <a href="/ketamine-therapy" class={currentPage === 'ketamine' ? 'text-emerald-700 font-semibold border-b-2 border-emerald-700 pb-1 whitespace-nowrap' : 'text-gray-700 hover:text-emerald-700 transition-colors font-medium whitespace-nowrap'}>Ketamine</a>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border border-gray-100 rounded-lg mt-2 z-50">
+    <div class="flex flex-col p-4 space-y-3">
+      <a href="/" class={currentPage === 'home' ? 'text-emerald-700 font-semibold py-2 px-3 bg-emerald-50 rounded-lg' : 'text-gray-700 hover:text-emerald-700 hover:bg-gray-50 transition-colors font-medium py-2 px-3 rounded-lg'}>Home</a>
+      <a href="/about" class={currentPage === 'about' ? 'text-emerald-700 font-semibold py-2 px-3 bg-emerald-50 rounded-lg' : 'text-gray-700 hover:text-emerald-700 hover:bg-gray-50 transition-colors font-medium py-2 px-3 rounded-lg'}>About Karen</a>
+      <a href="/services" class={currentPage === 'services' ? 'text-emerald-700 font-semibold py-2 px-3 bg-emerald-50 rounded-lg' : 'text-gray-700 hover:text-emerald-700 hover:bg-gray-50 transition-colors font-medium py-2 px-3 rounded-lg'}>Services</a>
+      <a href="/ketamine-therapy" class={currentPage === 'ketamine' ? 'text-emerald-700 font-semibold py-2 px-3 bg-emerald-50 rounded-lg' : 'text-gray-700 hover:text-emerald-700 hover:bg-gray-50 transition-colors font-medium py-2 px-3 rounded-lg'}>Ketamine Therapy</a>
+      <a href="/contact" class="bg-emerald-700 text-white px-4 py-3 rounded-lg hover:bg-emerald-800 transition-colors font-medium text-center">Contact</a>
     </div>
-    <a href="/contact" class={`bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors font-medium whitespace-nowrap ${currentPage === 'contact' ? 'ring-2 ring-emerald-300' : ''}`}>Contact</a>
   </div>
-</div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!menuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>
