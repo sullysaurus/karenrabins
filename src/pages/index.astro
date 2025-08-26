@@ -1,16 +1,265 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout 
+  title="Karen Rabins, LCSW - Licensed Clinical Social Worker in Raleigh, NC | Therapy & Counseling" 
+  description="Compassionate mental health care in Raleigh, NC with Karen Rabins, LCSW. Over 30 years experience specializing in anxiety, depression, grief, life transitions, and relationship challenges. Adults, college students, and young adults welcome."
+  keywords="Karen Rabins LCSW, therapist Raleigh NC, anxiety therapy Raleigh, depression counseling NC, grief counseling, life transitions therapy, relationship therapy, licensed clinical social worker Raleigh, mental health services Raleigh"
+>
+  <div slot="nav">
+    <Navigation currentPage="home" />
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12 lg:p-16 mb-16">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text Content -->
+        <div class="text-center lg:text-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Healing Through <span class="text-emerald-700">Understanding</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-gray-700 mb-8 leading-relaxed">
+            Compassionate mental health care with Karen Rabins, LCSW - over 30 years of experience serving adults in Raleigh, North Carolina
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
+            <a href="/contact" class="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold text-lg">
+              Schedule Consultation
+            </a>
+            <a href="tel:+19842239324" class="text-emerald-700 hover:text-emerald-800 font-semibold text-lg flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+              </svg>
+              (984) 223-9324
+            </a>
+          </div>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-600">
+            <span class="bg-white px-3 py-1 rounded-full">✓ Telehealth Available</span>
+            <span class="bg-white px-3 py-1 rounded-full">✓ Insurance Accepted</span>
+            <span class="bg-white px-3 py-1 rounded-full">✓ Evening Appointments</span>
+          </div>
+        </div>
+        
+        <!-- Profile Photo Section -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="relative">
+            <!-- Photo Container -->
+            <div class="w-80 h-80 sm:w-96 sm:h-96 bg-white rounded-2xl shadow-2xl p-4 relative overflow-hidden">
+              <!-- Profile Photo -->
+              <div class="w-full h-full rounded-xl overflow-hidden relative">
+                <img 
+                  src="/headshot.png" 
+                  alt="Karen Rabins, LCSW - Licensed Clinical Social Worker in Raleigh, NC"
+                  class="w-full h-full object-cover rounded-xl"
+                  loading="eager"
+                />
+                
+                <!-- Subtle overlay for better contrast with badge -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+              </div>
+              
+              <!-- Credential Badge -->
+              <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                <div class="bg-emerald-700 text-white px-4 py-2 rounded-full shadow-lg">
+                  <p class="text-sm font-semibold">Licensed Clinical Social Worker</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Background decorative elements -->
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-emerald-200 rounded-full opacity-50"></div>
+            <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-teal-200 rounded-full opacity-50"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="mb-16">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Therapy Services in Raleigh, NC</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Personalized, strengths-based approach with over 30 years of experience</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Life Transitions -->
+      <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Life Transitions</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed">Navigate major life changes with support and guidance through challenging transitions.</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>• Birth of a child</li>
+          <li>• Empty nest syndrome</li>
+          <li>• Career changes</li>
+          <li>• Divorce & loss</li>
+        </ul>
+      </div>
+
+      <!-- Anxiety & Depression -->
+      <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Anxiety & Depression</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed">Evidence-based treatment for anxiety, depression, and mood disorders using CBT and mindfulness approaches.</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>• Generalized anxiety</li>
+          <li>• Depression treatment</li>
+          <li>• Stress management</li>
+          <li>• Low self-esteem</li>
+        </ul>
+      </div>
+
+      <!-- Relationship & Family -->
+      <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 md:col-span-2 lg:col-span-1">
+        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-6 h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Relationships & Family</h3>
+        <p class="text-gray-600 mb-4 leading-relaxed">Support for relationship challenges, family conflict, parenting issues, and work-life balance.</p>
+        <ul class="text-sm text-gray-600 space-y-1">
+          <li>• Relationship issues</li>
+          <li>• Family conflict</li>
+          <li>• Parenting support</li>
+          <li>• Work-life balance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach Section -->
+  <section class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12 mb-16">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">A Compassionate Approach to Mental Health</h2>
+        <p class="text-xl text-gray-700 leading-relaxed">
+          Every person's journey is unique. I believe in creating a safe, non-judgmental space where you can explore your thoughts and feelings while developing practical tools for lasting change.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Empathy</h3>
+          <p class="text-gray-600">Understanding your perspective with genuine care and compassion</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Evidence-Based</h3>
+          <p class="text-gray-600">Using proven therapeutic methods tailored to your specific needs</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Collaborative</h3>
+          <p class="text-gray-600">Working together to achieve your mental health and wellness goals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section class="mb-16">
+    <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-lg border border-gray-100">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Serving Raleigh, North Carolina</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Conveniently located in Raleigh, NC, I provide both in-person and telehealth sessions to meet your needs. Evening appointments and flexible scheduling available.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Location</h3>
+                <p class="text-gray-600">Raleigh, North Carolina</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Phone</h3>
+                <a href="tel:+19842239324" class="text-emerald-700 hover:text-emerald-800 transition-colors">(984) 223-9324</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900">Email</h3>
+                <a href="mailto:krabinstherapy@gmail.com" class="text-emerald-700 hover:text-emerald-800 transition-colors">krabinstherapy@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Your Journey?</h3>
+          <p class="text-gray-700 mb-6">Take the first step toward healing and personal growth.</p>
+          <a href="/contact" class="inline-block bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold">
+            Schedule Your Consultation
+          </a>
+          <p class="text-sm text-gray-600 mt-4">Insurance accepted • Telehealth available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div slot="footer" class="space-y-4">
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="text-center sm:text-left">
+        <h3 class="font-bold text-gray-900 mb-1">Karen Rabins, LCSW</h3>
+        <p class="text-gray-600">Licensed Clinical Social Worker • Raleigh, NC 27613</p>
+      </div>
+      <div class="flex gap-6">
+        <a href="/" class="hover:text-emerald-700 transition-colors">Home</a>
+        <a href="/about" class="hover:text-emerald-700 transition-colors">About</a>
+        <a href="/services" class="hover:text-emerald-700 transition-colors">Services</a>
+        <a href="/contact" class="hover:text-emerald-700 transition-colors">Contact</a>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 pt-4">
+      <p class="text-sm">&copy; 2025 Karen Rabins, LCSW. All rights reserved.</p>
+      <p class="text-sm mt-1 font-medium text-emerald-700">Free 15-minute consultation available.</p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,171 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: URL;
+  keywords?: string;
+  author?: string;
+}
+
+const { 
+  title, 
+  description = "Compassionate mental health care with Karin Rabins, Licensed Clinical Psychologist in Raleigh, NC", 
+  image = "/favicon.svg", 
+  canonicalURL,
+  keywords = "psychologist Raleigh NC, therapist Raleigh, anxiety therapy, depression counseling, ketamine therapy, EMDR therapy, trauma therapy, couples counseling, mental health Raleigh",
+  author = "Karin Rabins, Licensed Clinical Psychologist"
+} = Astro.props;
+
+const currentURL = canonicalURL || new URL(Astro.url.pathname, Astro.site);
+const fullImageURL = new URL(image, Astro.url).toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- SEO Meta Tags -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content={author} />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <link rel="canonical" href={currentURL} />
+  
+  <!-- Local SEO -->
+  <meta name="geo.region" content="US-NC" />
+  <meta name="geo.placename" content="Raleigh, North Carolina" />
+  <meta name="geo.position" content="35.7796;-78.6382" />
+  <meta name="ICBM" content="35.7796, -78.6382" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={currentURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={fullImageURL} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Karin Rabins Therapy" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content={currentURL} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={fullImageURL} />
+  <meta name="twitter:image:alt" content="Karin Rabins Therapy - Mental Health Services in Raleigh, NC" />
+  <meta name="twitter:creator" content="@KarinRabinsTherapy" />
+  <meta name="twitter:site" content="@KarinRabinsTherapy" />
+  
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+  <link rel="mask-icon" href="/favicon.svg" color="#6b9080" />
+  <meta name="theme-color" content="#6b9080" />
+  <meta name="msapplication-TileColor" content="#6b9080" />
+  
+  <!-- Schema.org JSON-LD for Local Business -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "@id": "https://karinrabinstherapy.com/#organization",
+      "name": "Karin Rabins Therapy",
+      "description": "Licensed Clinical Psychologist providing compassionate mental health care, anxiety therapy, depression counseling, trauma therapy, and ketamine therapy in Raleigh, North Carolina.",
+      "url": "https://karinrabinstherapy.com",
+      "telephone": "+19197073347",
+      "email": "krabinstherapy@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Raleigh",
+        "addressRegion": "NC",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "35.7796",
+        "longitude": "-78.6382"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Raleigh, North Carolina"
+      },
+      "medicalSpecialty": [
+        "Clinical Psychology",
+        "Anxiety Therapy",
+        "Depression Counseling",
+        "Trauma Therapy",
+        "Ketamine Therapy",
+        "Couples Therapy"
+      ],
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Insurance",
+      "currenciesAccepted": "USD",
+      "founder": {
+        "@type": "Person",
+        "name": "Karin Rabins",
+        "jobTitle": "Licensed Clinical Psychologist",
+        "telephone": "+19197073347",
+        "email": "krabinstherapy@gmail.com"
+      },
+      "sameAs": [
+        "https://www.psychologytoday.com/us/therapists/karen-lynn-rabins-raleigh-nc/1314131"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional License",
+        "name": "Licensed Clinical Psychologist",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "North Carolina Psychology Board"
+        }
+      }
+    }
+  </script>
+  
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Karin Rabins Therapy",
+      "description": {JSON.stringify(description)},
+      "url": {JSON.stringify(currentURL.toString())},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://karinrabinstherapy.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50 text-gray-900 antialiased font-sans">
+  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <slot name="nav" />
+    </nav>
+  </header>
+  
+  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+    <slot />
+  </main>
+  
+  <footer class="bg-white border-t border-gray-200 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-600">
+      <slot name="footer" />
+    </div>
+  </footer>
+</body>
+</html>
