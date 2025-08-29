@@ -13,33 +13,52 @@ import Navigation from '../components/Navigation.astro';
   </div>
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12 lg:p-16 mb-16">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-        Therapy <span class="text-emerald-700">Services</span>
-      </h1>
-      <p class="text-xl sm:text-2xl text-gray-700 mb-8 leading-relaxed">
-        Personalized, strengths-based therapy with over 30 years of experience
-      </p>
+  <section class="relative overflow-hidden mb-12 sm:mb-16 lg:mb-20">
+    <!-- Background with subtle pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-25 to-emerald-100 opacity-60"></div>
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.1) 0%, transparent 50%)"></div>
+    
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+      <div class="text-center">
+        <div class="mb-4 sm:mb-6">
+          <span class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-medium rounded-full mb-3 sm:mb-4">
+            Comprehensive Therapy Services
+          </span>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+            Therapy <span class="text-emerald-700">Services</span>
+          </h1>
+        </div>
+        
+        <p class="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+          Personalized, strengths-based therapy with over 30 years of experience
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Overview -->
-  <section class="mb-16">
-    <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-lg border border-gray-100">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Who I Help</h2>
-        <p class="text-lg text-gray-700 leading-relaxed mb-8">
-          I specialize in working with adults (20s-60s) and seniors(60s+) who are navigating life's ever- changing challenges. I use an eclectic, psychodynamic, strengths-based approach that incorporates positive psychology, mindfulness, attachment theory, cognitive behavioral therapies, and self-care.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-emerald-50 rounded-xl p-6">
-            <h3 class="font-bold text-emerald-700 mb-2">Adults 20 - 60s</h3>
-            <p class="text-gray-600">Each stage of adulthood has unique and universal challenges that impact our day-to-day experience. Concerns will be addressed from a holistic perspective, integrating your general well-being with the demands of your life.</p>
+  <section class="mb-12 sm:mb-16 lg:mb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg border border-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-6 sm:mb-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Who I Help</h2>
+            <div class="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
           </div>
-          <div class="bg-emerald-50 rounded-xl p-6">
-            <h3 class="font-bold text-emerald-700 mb-2">Seniors 60 plus</h3>
-            <p class="text-gray-600">Processing the impact of aging, retirement, the search for meaning and purpose, grief and loss, while integrating ways to positively impact day-to-day quality of life.</p>
+          
+          <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8">
+            I specialize in working with adults (20s-60s) and seniors(60s+) who are navigating life's ever- changing challenges. I use an eclectic, psychodynamic, strengths-based approach that incorporates positive psychology, mindfulness, attachment theory, cognitive behavioral therapies, and self-care.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div class="bg-emerald-50 rounded-xl p-4 sm:p-6">
+              <h3 class="font-bold text-emerald-700 mb-2 text-sm sm:text-base">Adults 20 - 60s</h3>
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Each stage of adulthood has unique and universal challenges that impact our day-to-day experience. Concerns will be addressed from a holistic perspective, integrating your general well-being with the demands of your life.</p>
+            </div>
+            <div class="bg-emerald-50 rounded-xl p-4 sm:p-6">
+              <h3 class="font-bold text-emerald-700 mb-2 text-sm sm:text-base">Seniors 60 plus</h3>
+              <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Processing the impact of aging, retirement, the search for meaning and purpose, grief and loss, while integrating ways to positively impact day-to-day quality of life.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -47,112 +66,122 @@ import Navigation from '../components/Navigation.astro';
   </section>
 
   <!-- Top Specialties -->
-  <section class="mb-16">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">Areas of Practice</h2>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-      <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-2xl p-8 shadow-xl">
-        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold mb-4">Life Transitions</h3>
-        <p class="text-white/90 mb-6">Navigate major life changes with support and guidance</p>
-        <ul class="space-y-2 text-white/80">
-          <li>• Birth of a child</li>
-          <li>• Empty nest syndrome</li>
-          <li>• Career changes</li>
-          <li>• Death, illness, caregiving</li>
-          <li>• Divorce and relationship changes</li>
-        </ul>
+  <section class="mb-12 sm:mb-16 lg:mb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8 sm:mb-10 lg:mb-12 text-center">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Areas of Practice</h2>
+        <div class="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
       </div>
       
-      <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-2xl p-8 shadow-xl">
-        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-          </svg>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-xl lg:rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div class="w-12 sm:w-16 h-12 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Life Transitions</h3>
+          <p class="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Navigate major life changes with support and guidance</p>
+          <ul class="space-y-1 sm:space-y-2 text-white/80 text-sm sm:text-base">
+            <li>• Birth of a child</li>
+            <li>• Empty nest syndrome</li>
+            <li>• Career changes</li>
+            <li>• Death, illness, caregiving</li>
+            <li>• Divorce and relationship changes</li>
+          </ul>
         </div>
-        <h3 class="text-2xl font-bold mb-4">Family Conflict</h3>
-        <p class="text-white/90 mb-6">Resolve family dynamics and improve relationships</p>
-        <ul class="space-y-2 text-white/80">
-          <li>• Parent-child relationships</li>
-          <li>• Sibling conflicts</li>
-          <li>• Intergenerational issues</li>
-          <li>• Family communication</li>
-          <li>• Setting boundaries</li>
-        </ul>
-      </div>
       
-      <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-2xl p-8 shadow-xl">
-        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-          </svg>
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-xl lg:rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div class="w-12 sm:w-16 h-12 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Family Conflict</h3>
+          <p class="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Resolve family dynamics and improve relationships</p>
+          <ul class="space-y-1 sm:space-y-2 text-white/80 text-sm sm:text-base">
+            <li>• Parent-child relationships</li>
+            <li>• Sibling conflicts</li>
+            <li>• Intergenerational issues</li>
+            <li>• Family communication</li>
+            <li>• Setting boundaries</li>
+          </ul>
         </div>
-        <h3 class="text-2xl font-bold mb-4">Parenting</h3>
-        <p class="text-white/90 mb-6">Support and strategies for parenting challenges</p>
-        <ul class="space-y-2 text-white/80">
-          <li>• Parenting strategies</li>
-          <li>• Managing difficult behaviors</li>
-          <li>• Co-parenting after divorce</li>
-          <li>• Blended family dynamics</li>
-          <li>• Parent stress and burnout</li>
-        </ul>
+      
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white rounded-xl lg:rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div class="w-12 sm:w-16 h-12 sm:h-16 bg-white/20 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+            <svg class="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">Parenting</h3>
+          <p class="text-white/90 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">Support and strategies for parenting challenges</p>
+          <ul class="space-y-1 sm:space-y-2 text-white/80 text-sm sm:text-base">
+            <li>• Parenting strategies</li>
+            <li>• Managing difficult behaviors</li>
+            <li>• Co-parenting after divorce</li>
+            <li>• Blended family dynamics</li>
+            <li>• Parent stress and burnout</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Additional Areas of Expertise -->
-  <section class="mb-16">
-    <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12">
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">Additional Areas of Expertise</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Anxiety</h3>
-          <p class="text-gray-600">Managing worry, panic, and anxiety disorders</p>
+  <section class="mb-12 sm:mb-16 lg:mb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12">
+        <div class="mb-8 sm:mb-10 lg:mb-12 text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Additional Areas of Expertise</h2>
+          <div class="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
         </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Depression</h3>
-          <p class="text-gray-600">Support for low mood, sadnessm hopelessness, and depression</p>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Anxiety</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Managing worry, panic, and anxiety disorders</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Grief</h3>
-          <p class="text-gray-600">Processing loss and navigating the grieving process</p>
-        </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Depression</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Support for low mood, sadnessm hopelessness, and depression</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Relationship Issues</h3>
-          <p class="text-gray-600">Improving communication and relationship dynamics</p>
-        </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Grief</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Processing loss and navigating the grieving process</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Self-Esteem</h3>
-          <p class="text-gray-600">Building confidence and self-worth</p>
-        </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Relationship Issues</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Improving communication and relationship dynamics</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Work-Life Balance</h3>
-          <p class="text-gray-600">Managing stress and finding balance</p>
-        </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Self-Esteem</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Building confidence and self-worth</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Burnout & Compassion Fatigue</h3>
-          <p class="text-gray-600">Self care strategies and establishing boundaries</p>
-        </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Work-Life Balance</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Managing stress and finding balance</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Women's Issues</h3>
-          <p class="text-gray-600">Addressing challenges specific to women's experiences and stage specific issues</p>
-        </div>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Burnout & Compassion Fatigue</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Self care strategies and establishing boundaries</p>
+          </div>
         
-        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-          <h3 class="text-xl font-bold text-emerald-700 mb-3">Stress Management</h3>
-          <p class="text-gray-600">Developing healthy coping strategies</p>
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Women's Issues</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Addressing challenges specific to women's experiences and stage specific issues</p>
+          </div>
+        
+          <div class="bg-white rounded-xl p-4 sm:p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg sm:text-xl font-bold text-emerald-700 mb-2 sm:mb-3">Stress Management</h3>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">Developing healthy coping strategies</p>
+          </div>
         </div>
       </div>
     </div>
@@ -295,31 +324,41 @@ import Navigation from '../components/Navigation.astro';
   </section>
 
   <!-- Philosophy Quote -->
-  <section class="mb-16">
-    <div class="bg-emerald-700 text-white rounded-2xl p-8 sm:p-12 text-center">
-      <blockquote class="text-xl sm:text-2xl italic mb-6 leading-relaxed">
-        "If you're working hard to manage feelings and circumstances you don't like, why not use that energy to learn how to create something better for yourself."
-      </blockquote>
-      <p class="text-lg opacity-90">
-        I believe that with the safety and support of a therapeutic partnership, people can access their own wisdom and respond to their challenges I support each person's unique journey with respect, presence, honesty, and a little humor.
-      </p>
+  <section class="mb-12 sm:mb-16 lg:mb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-emerald-700 text-white rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+        <blockquote class="text-lg sm:text-xl lg:text-2xl italic mb-4 sm:mb-6 leading-relaxed">
+          "If you're working hard to manage feelings and circumstances you don't like, why not use that energy to learn how to create something better for yourself."
+        </blockquote>
+        <p class="text-base sm:text-lg opacity-90 leading-relaxed">
+          I believe that with the safety and support of a therapeutic partnership, people can access their own wisdom and respond to their challenges I support each person's unique journey with respect, presence, honesty, and a little humor.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="mb-16">
-    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ready to Begin?</h2>
-      <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Take the first step toward healing and personal growth.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="tel:+19195787109" class="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold text-lg">
-          Call for Free Consultation: (919) 578-7109
-        </a>
-        <a href="/contact" class="text-emerald-700 hover:text-emerald-800 font-semibold text-lg">
-          Learn More About Getting Started →
-        </a>
+  <section class="mb-12 sm:mb-16 lg:mb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+        <div class="mb-6 sm:mb-8">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Ready to Begin?</h2>
+          <div class="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mx-auto"></div>
+        </div>
+        
+        <p class="text-base sm:text-lg lg:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">Take the first step toward healing and personal growth.</p>
+        
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-4 sm:mb-6">
+          <a href="tel:+19195787109" class="w-full sm:w-auto bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold text-base sm:text-lg">
+            Call for Free Consultation: (919) 578-7109
+          </a>
+          <a href="/contact" class="text-emerald-700 hover:text-emerald-800 font-semibold text-base sm:text-lg">
+            Learn More About Getting Started →
+          </a>
+        </div>
+        
+        <p class="text-xs sm:text-sm text-gray-600">Free 15-minute consultation • Virtual and in-person sessions available</p>
       </div>
-      <p class="text-sm text-gray-600 mt-6">Free 15-minute consultation • Virtual and in-person sessions available</p>
     </div>
   </section>
 

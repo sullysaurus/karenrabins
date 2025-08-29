@@ -10,7 +10,7 @@ const { currentPage } = Astro.props;
   <!-- Header with Logo and Hamburger -->
   <div class="flex items-center justify-between">
     <!-- Logo/Brand -->
-    <div class="flex items-center space-x-3">
+    <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
       <div class="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-full flex items-center justify-center">
         <span class="text-white font-bold text-lg">KR</span>
       </div>
@@ -18,7 +18,7 @@ const { currentPage } = Astro.props;
         <h1 class="text-xl font-bold text-gray-900">Karen Rabins, LCSW</h1>
         <p class="text-sm text-gray-600">Licensed Clinical Social Worker</p>
       </div>
-    </div>
+    </a>
     
     <!-- Desktop Navigation -->
     <div class="hidden md:flex items-center gap-6">

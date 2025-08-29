@@ -19,8 +19,8 @@ import Navigation from '../components/Navigation.astro';
     <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.1) 0%, transparent 50%)"></div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <!-- Text Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+        <!-- Left Side - Main Content -->
         <div class="text-center lg:text-left order-2 lg:order-1">
           <div class="mb-4 sm:mb-6">
             <span class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-medium rounded-full mb-3 sm:mb-4">
@@ -44,25 +44,6 @@ import Navigation from '../components/Navigation.astro';
               </p>
             </div>
             
-            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 lg:p-6 shadow-sm border border-white/50">
-              <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-3">
-                <strong>I specialize in addressing:</strong>
-              </p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600">
-                <span class="flex items-start"><span class="mr-1">•</span> Life transitions</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Anxiety</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Depression</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Family challenges</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Parenting issues</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Relationship challenges</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Burnout</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Compassion fatigue</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Sadness and loneliness</span>
-                <span class="flex items-start"><span class="mr-1">•</span> Grief/loss</span>
-                <span class="flex items-start sm:col-span-2"><span class="mr-1">•</span> Just feeling stuck</span>
-              </div>
-            </div>
-            
             <div class="bg-emerald-50 rounded-xl p-4 sm:p-5 lg:p-6 border-l-4 border-emerald-500">
               <p class="text-sm sm:text-base text-emerald-800 leading-relaxed italic">
                 "I love what I do. It's a privilege to part of each person's journey."
@@ -70,7 +51,7 @@ import Navigation from '../components/Navigation.astro';
             </div>
           </div>
           
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center mb-6 sm:mb-8">
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center">
             <a href="/contact" class="w-full sm:w-auto bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold text-base sm:text-lg text-center">
               Schedule Consultation
             </a>
@@ -81,42 +62,66 @@ import Navigation from '../components/Navigation.astro';
               (919) 578-7109
             </a>
           </div>
-          
-          <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-2 sm:gap-3 text-xs sm:text-sm text-gray-600">
-            <span class="bg-white px-3 py-1.5 rounded-full shadow-sm">✓ Telehealth and In-Person Available</span>
-            <span class="bg-white px-3 py-1.5 rounded-full shadow-sm">✓ Insurances Accepted: Blue Cross Blue Shield, Aetna</span>
-          </div>
         </div>
         
-        <!-- Profile Photo Section -->
-        <div class="flex justify-center lg:justify-end order-1 lg:order-2 mb-6 lg:mb-0">
-          <div class="relative">
-            <!-- Photo Container -->
-            <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-white rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-4 relative overflow-hidden">
-              <!-- Profile Photo -->
-              <div class="w-full h-full rounded-xl overflow-hidden relative">
-                <img 
-                  src="/headshot.png" 
-                  alt="Karen Rabins, LCSW - Licensed Clinical Social Worker in Raleigh, NC"
-                  class="w-full h-full object-cover rounded-xl"
-                  loading="eager"
-                />
+        <!-- Right Side - Photo + Additional Content -->
+        <div class="order-1 lg:order-2 space-y-6 lg:space-y-8">
+          <!-- Profile Photo -->
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative">
+              <!-- Photo Container -->
+              <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-white rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-4 relative overflow-hidden">
+                <!-- Profile Photo -->
+                <div class="w-full h-full rounded-xl overflow-hidden relative">
+                  <img 
+                    src="/headshot.png" 
+                    alt="Karen Rabins, LCSW - Licensed Clinical Social Worker in Raleigh, NC"
+                    class="w-full h-full object-cover rounded-xl"
+                    loading="eager"
+                  />
+                  
+                  <!-- Subtle overlay for better contrast with badge -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+                </div>
                 
-                <!-- Subtle overlay for better contrast with badge -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
-              </div>
-              
-              <!-- Credential Badge -->
-              <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-auto">
-                <div class="bg-emerald-700 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg">
-                  <p class="text-xs sm:text-sm font-semibold text-center">Licensed Clinical Social Worker</p>
+                <!-- Credential Badge -->
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-auto">
+                  <div class="bg-emerald-700 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg">
+                    <p class="text-xs sm:text-sm font-semibold text-center">Licensed Clinical Social Worker</p>
+                  </div>
                 </div>
               </div>
+              
+              <!-- Background decorative elements - hidden on mobile -->
+              <div class="hidden sm:block absolute -top-4 -right-4 w-16 sm:w-20 h-16 sm:h-20 bg-emerald-200 rounded-full opacity-50"></div>
+              <div class="hidden sm:block absolute -bottom-6 -left-6 w-12 sm:w-16 h-12 sm:h-16 bg-teal-200 rounded-full opacity-50"></div>
             </div>
-            
-            <!-- Background decorative elements - hidden on mobile -->
-            <div class="hidden sm:block absolute -top-4 -right-4 w-16 sm:w-20 h-16 sm:h-20 bg-emerald-200 rounded-full opacity-50"></div>
-            <div class="hidden sm:block absolute -bottom-6 -left-6 w-12 sm:w-16 h-12 sm:h-16 bg-teal-200 rounded-full opacity-50"></div>
+          </div>
+          
+          <!-- Specialties Card -->
+          <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 lg:p-6 shadow-sm border border-white/50">
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-3 font-semibold text-center lg:text-left">
+              I specialize in addressing:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600">
+              <span class="flex items-start"><span class="mr-1">•</span> Life transitions</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Anxiety</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Depression</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Family challenges</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Parenting issues</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Relationship challenges</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Burnout</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Compassion fatigue</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Sadness and loneliness</span>
+              <span class="flex items-start"><span class="mr-1">•</span> Grief/loss</span>
+              <span class="flex items-start sm:col-span-2"><span class="mr-1">•</span> Just feeling stuck</span>
+            </div>
+          </div>
+          
+          <!-- Insurance & Availability Info -->
+          <div class="flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm text-center lg:text-left">
+            <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm border border-white/50">✓ Telehealth and In-Person Available</span>
+            <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm border border-white/50">✓ Insurances Accepted: Blue Cross Blue Shield, Aetna</span>
           </div>
         </div>
       </div>
