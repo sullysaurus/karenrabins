@@ -13,17 +13,63 @@ import Navigation from '../components/Navigation.astro';
   </div>
 
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12 lg:p-16 mb-16">
-    <div class="max-w-6xl mx-auto">
+  <section class="relative overflow-hidden mb-20">
+    <!-- Background with subtle pattern -->
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-25 to-emerald-100 opacity-60"></div>
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.1) 0%, transparent 50%)"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Text Content -->
         <div class="text-center lg:text-left">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Personalized Therapy To Meet Your Needs
-          </h1>
-          <p class="text-xl sm:text-2xl text-gray-700 mb-8 leading-relaxed">
-            Welcome to my website. I'm glad you're here. I'm Karen Rabins, a Licensed Clinical Social Worker (LCSW) specializing in work with adults and seniors. With 30+ years of experience working in health care, mental health, school and corporate settings with people of all ages, I have a respectful understanding of the challenges and beauty of being human. I specialize in addressing life transitions, anxiety, depression, family challenges (parenting, relationship challenges), burnout, compassion fatigue, sadness and loneliness, grief/loss, and just feeling stuck. I love what I do. It's a privilege to part of each person's journey.
-          </p>
+          <div class="mb-6">
+            <span class="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 text-sm font-medium rounded-full mb-4">
+              Welcome to my website. I'm glad you're here.
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              Personalized Therapy To Meet Your Needs
+            </h1>
+          </div>
+          
+          <div class="space-y-6 mb-8">
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/50">
+              <p class="text-lg text-gray-700 leading-relaxed">
+                <strong>I'm Karen Rabins, a Licensed Clinical Social Worker (LCSW)</strong> specializing in work with adults and seniors.
+              </p>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/50">
+              <p class="text-gray-700 leading-relaxed">
+                <strong>With 30+ years of experience</strong> working in health care, mental health, school and corporate settings with people of all ages, I have a respectful understanding of the challenges and beauty of being human.
+              </p>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/50">
+              <p class="text-gray-700 leading-relaxed mb-3">
+                <strong>I specialize in addressing:</strong>
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                <span>• Life transitions</span>
+                <span>• Anxiety</span>
+                <span>• Depression</span>
+                <span>• Family challenges</span>
+                <span>• Parenting issues</span>
+                <span>• Relationship challenges</span>
+                <span>• Burnout</span>
+                <span>• Compassion fatigue</span>
+                <span>• Sadness and loneliness</span>
+                <span>• Grief/loss</span>
+                <span>• Just feeling stuck</span>
+              </div>
+            </div>
+            
+            <div class="bg-emerald-50 rounded-xl p-6 border-l-4 border-emerald-500">
+              <p class="text-emerald-800 leading-relaxed italic">
+                "I love what I do. It's a privilege to part of each person's journey."
+              </p>
+            </div>
+          </div>
+          
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-8">
             <a href="/contact" class="bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold text-lg">
               Schedule Consultation
@@ -35,9 +81,10 @@ import Navigation from '../components/Navigation.astro';
               (919) 578-7109
             </a>
           </div>
+          
           <div class="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-gray-600">
-            <span class="bg-white px-3 py-1 rounded-full">✓ Telehealth and In-Person Available</span>
-            <span class="bg-white px-3 py-1 rounded-full">✓ Insurances Accepted: Blue Cross Blue Shield, Aetna</span>
+            <span class="bg-white px-3 py-1 rounded-full shadow-sm">✓ Telehealth and In-Person Available</span>
+            <span class="bg-white px-3 py-1 rounded-full shadow-sm">✓ Insurances Accepted: Blue Cross Blue Shield, Aetna</span>
           </div>
         </div>
         
@@ -120,44 +167,85 @@ import Navigation from '../components/Navigation.astro';
   </section>
 
   <!-- Approach Section -->
-  <section class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-8 sm:p-12 mb-16">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ever Person's Journey is Unique</h2>
-        <p class="text-xl text-gray-700 leading-relaxed">
-          I strive to create a safe, non-judgmental space where you can explore, gain insight and awareness while developing practical tools for meaninful change.
-        </p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-            </svg>
+  <section class="mb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
+          <!-- Content -->
+          <div class="lg:col-span-3 p-8 sm:p-12 lg:p-16">
+            <div class="mb-8">
+              <span class="inline-block px-4 py-2 bg-emerald-100 text-emerald-800 text-sm font-medium rounded-full mb-4">
+                My Approach
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Every Person's Journey is Unique</h2>
+              <div class="w-20 h-1 bg-emerald-500 rounded-full mb-6"></div>
+            </div>
+            
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-white/50 mb-8">
+              <p class="text-lg text-gray-700 leading-relaxed">
+                I strive to create a safe, non-judgmental space where you can explore, gain insight and awareness while developing practical tools for meaninful change.
+              </p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Empathy</h3>
+                  <p class="text-gray-600">Understanding your perspective with genuine care and compassion</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Evidence-Based</h3>
+                  <p class="text-gray-600">Using proven therapeutic methods tailored to your specific needs</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Collaborative</h3>
+                  <p class="text-gray-600">Working together to achieve your mental health and wellness goals</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Empathy</h3>
-          <p class="text-gray-600">Understanding your perspective with genuine care and compassion</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
+          
+          <!-- Visual Element -->
+          <div class="lg:col-span-2 bg-gradient-to-br from-emerald-600 to-teal-700 p-8 sm:p-12 lg:p-16 flex items-center justify-center">
+            <div class="text-center text-white">
+              <div class="relative mb-8">
+                <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto backdrop-blur-sm border border-white/20">
+                  <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a3 3 0 003 3h2a3 3 0 003-3V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zM8 7a1 1 0 012 0v4a1 1 0 11-2 0V7zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V7a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <!-- Floating elements -->
+                <div class="absolute -top-2 -right-2 w-6 h-6 bg-white/30 rounded-full"></div>
+                <div class="absolute -bottom-4 -left-4 w-8 h-8 bg-white/20 rounded-full"></div>
+              </div>
+              <h3 class="text-2xl font-bold mb-4">Personalized Care</h3>
+              <p class="text-white/90 leading-relaxed">
+                Your unique journey deserves a therapeutic approach that's designed specifically for you and your needs.
+              </p>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Evidence-Based</h3>
-          <p class="text-gray-600">Using proven therapeutic methods tailored to your specific needs</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Collaborative</h3>
-          <p class="text-gray-600">Working together to achieve your mental health and wellness goals</p>
         </div>
       </div>
     </div>
