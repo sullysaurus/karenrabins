@@ -1,127 +1,112 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout 
-  title="Karen Rabins, LCSW - Licensed Clinical Social Worker in Raleigh, NC | Therapy & Counseling" 
-  description="Compassionate mental health care in Raleigh, NC with Karen Rabins, LCSW. Over 30 years experience specializing in anxiety, depression, grief, life transitions, and relationship challenges. Adults, college students, and young adults welcome."
-  keywords="Karen Rabins LCSW, therapist Raleigh NC, anxiety therapy Raleigh, depression counseling NC, grief counseling, life transitions therapy, relationship therapy, licensed clinical social worker Raleigh, mental health services Raleigh"
+  title="Karen Rabins, LCSW - Personalized Therapy To Meet Your Needs" 
+  description="Welcome to my website. I'm Karen Rabins, a Licensed Clinical Social Worker (LCSW) specializing in work with adults and seniors. With 30+ years of experience."
+  keywords="Karen Rabins LCSW, therapist Raleigh NC, anxiety therapy, depression counseling, grief counseling, life transitions therapy, licensed clinical social worker"
 >
   <div slot="nav">
     <Navigation currentPage="home" />
   </div>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden mb-12 sm:mb-16 lg:mb-20">
-    <!-- Background with subtle pattern -->
-    <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-25 to-emerald-100 opacity-60"></div>
-    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(20, 184, 166, 0.1) 0%, transparent 50%)"></div>
+  <section class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-teal-200 rounded-full filter blur-3xl"></div>
+    </div>
     
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
-        <!-- Left Side - Main Content -->
-        <div class="text-center lg:text-left order-2 lg:order-1">
-          <div class="mb-4 sm:mb-6">
-            <span class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-medium rounded-full mb-3 sm:mb-4">
-              Welcome to my website. I'm glad you're here.
-            </span>
-            <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-              Personalized Therapy To Meet Your Needs
-            </h1>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-10">
+          Personalized Therapy To Meet Your Needs
+        </h1>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/contact" class="bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 shadow-lg font-medium text-lg transform hover:scale-105">
+            Schedule Consultation
+          </a>
+          <a href="tel:9195787109" class="text-purple-600 hover:text-purple-700 font-medium text-lg flex items-center gap-2 transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            Phone: (919) 578-7109
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section with Headshot -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Centered Image and Name -->
+      <div class="text-center mb-12">
+        <div class="relative inline-block mb-8">
+          <!-- Decorative blob background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-teal-100 rounded-full filter blur-2xl opacity-60 scale-110"></div>
+          <!-- Image container -->
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+            <img 
+              src="/headshot.png" 
+              alt="Karen Rabins, LCSW"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Karen Rabins, LCSW</h2>
+        <p class="text-lg text-purple-600">Licensed Clinical Social Worker</p>
+      </div>
+      
+      <!-- Bio Content in Centered Cards -->
+      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="bg-gradient-to-br from-purple-50 to-teal-50 rounded-2xl p-8">
+          <p class="text-lg text-gray-700 leading-relaxed text-center">
+            Welcome to my website. I'm glad you're here. I'm Karen Rabins, a Licensed Clinical Social Worker (LCSW) 
+            specializing in work with adults and seniors. With 30+ years of experience working in health care, 
+            mental health, school and corporate settings with people of all ages, I have a respectful understanding 
+            of the challenges and beauty of being human.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+            <p class="text-gray-700 leading-relaxed">
+              I specialize in addressing life transitions, anxiety, depression, family challenges, burnout, 
+              compassion fatigue, sadness and loneliness, grief/loss, and just feeling stuck. I love what I do. 
+              It's a privilege to be a part of each person's journey.
+            </p>
           </div>
           
-          <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 lg:p-6 shadow-sm border border-white/50">
-              <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-                <strong>I'm Karen Rabins, a Licensed Clinical Social Worker (LCSW)</strong> specializing in work with adults and seniors.
-              </p>
-            </div>
-            
-            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 lg:p-6 shadow-sm border border-white/50">
-              <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
-                <strong>With 30+ years of experience</strong> working in health care, mental health, school and corporate settings with people of all ages, I have a respectful understanding of the challenges and beauty of being human.
-              </p>
-            </div>
-            
-            <div class="bg-emerald-50 rounded-xl p-4 sm:p-5 lg:p-6 border-l-4 border-emerald-500">
-              <p class="text-sm sm:text-base text-emerald-800 leading-relaxed italic">
-                "I love what I do. It's a privilege to part of each person's journey."
-              </p>
-            </div>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center">
-            <a href="/contact" class="w-full sm:w-auto bg-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold text-base sm:text-lg text-center">
-              Schedule Consultation
-            </a>
-            <a href="tel:+19195787109" class="text-emerald-700 hover:text-emerald-800 font-semibold text-base sm:text-lg flex items-center gap-2">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-              </svg>
-              (919) 578-7109
-            </a>
+          <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
+            <p class="text-gray-700 leading-relaxed">
+              I believe that healing happens in relationships built on trust, respect, and genuine care. 
+              Every person has the capacity for growth and change, and sometimes we just need the right 
+              support and tools to unlock that potential.
+            </p>
           </div>
         </div>
         
-        <!-- Right Side - Photo + Additional Content -->
-        <div class="order-1 lg:order-2 space-y-6 lg:space-y-8">
-          <!-- Profile Photo -->
-          <div class="flex justify-center lg:justify-end">
-            <div class="relative">
-              <!-- Photo Container -->
-              <div class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 bg-white rounded-2xl shadow-xl sm:shadow-2xl p-3 sm:p-4 relative overflow-hidden">
-                <!-- Profile Photo -->
-                <div class="w-full h-full rounded-xl overflow-hidden relative">
-                  <img 
-                    src="/headshot.png" 
-                    alt="Karen Rabins, LCSW - Licensed Clinical Social Worker in Raleigh, NC"
-                    class="w-full h-full object-cover rounded-xl"
-                    loading="eager"
-                  />
-                  
-                  <!-- Subtle overlay for better contrast with badge -->
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
-                </div>
-                
-                <!-- Credential Badge -->
-                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-auto">
-                  <div class="bg-emerald-700 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg">
-                    <p class="text-xs sm:text-sm font-semibold text-center">Licensed Clinical Social Worker</p>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Background decorative elements - hidden on mobile -->
-              <div class="hidden sm:block absolute -top-4 -right-4 w-16 sm:w-20 h-16 sm:h-20 bg-emerald-200 rounded-full opacity-50"></div>
-              <div class="hidden sm:block absolute -bottom-6 -left-6 w-12 sm:w-16 h-12 sm:h-16 bg-teal-200 rounded-full opacity-50"></div>
-            </div>
-          </div>
+        <div class="bg-white rounded-2xl p-8 shadow-md border border-purple-100 text-center">
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            I strive to create a safe, non-judgmental space where you can explore, gain insight and awareness, 
+            and learn practical skills to create meaningful change.
+          </p>
           
-          <!-- Specialties Card -->
-          <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 lg:p-6 shadow-sm border border-white/50">
-            <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-3 font-semibold text-center lg:text-left">
-              I specialize in addressing:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs sm:text-sm text-gray-600">
-              <span class="flex items-start"><span class="mr-1">•</span> Life transitions</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Anxiety</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Depression</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Family challenges</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Parenting issues</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Relationship challenges</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Burnout</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Compassion fatigue</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Sadness and loneliness</span>
-              <span class="flex items-start"><span class="mr-1">•</span> Grief/loss</span>
-              <span class="flex items-start sm:col-span-2"><span class="mr-1">•</span> Just feeling stuck</span>
-            </div>
-          </div>
-          
-          <!-- Insurance & Availability Info -->
-          <div class="flex flex-col gap-2 sm:gap-3 text-xs sm:text-sm text-center lg:text-left">
-            <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm border border-white/50">✓ Telehealth and In-Person Available</span>
-            <span class="bg-white/90 px-3 py-1.5 rounded-full shadow-sm border border-white/50">✓ Insurances Accepted: Blue Cross Blue Shield, Aetna</span>
+          <!-- Features -->
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">
+              ✓ Telehealth and In-Person Available
+            </span>
+            <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-medium">
+              ✓ Insurances Accepted: Blue Cross Blue Shield, Aetna
+            </span>
           </div>
         </div>
       </div>
@@ -129,147 +114,94 @@ import Navigation from '../components/Navigation.astro';
   </section>
 
   <!-- Services Section -->
-  <section class="mb-12 sm:mb-16 px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-8 sm:mb-12">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Services</h2>
-      <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">Personalized, strengths-based approach with over 30 years of experience</p>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
-      <!-- Life Transitions -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 sm:hover:-translate-y-2 border border-gray-100">
-        <div class="w-10 sm:w-12 h-10 sm:h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-          <svg class="w-5 sm:w-6 h-5 sm:h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Life Transitions</h3>
-        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Navigate major life changes with support and guidance through challenging transitions such as birth of a child, empty nest syndrom, career changes, divorce and loss, illness.</p>
-      </div>
-
-      <!-- Anxiety & Depression -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 sm:hover:-translate-y-2 border border-gray-100">
-        <div class="w-10 sm:w-12 h-10 sm:h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-          <svg class="w-5 sm:w-6 h-5 sm:h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Anxiety & Depression</h3>
-        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Evidence-based treatment for anxiety, depression, and mood disorders including CBT and mindfulness approaches.</p>
-      </div>
-
-      <!-- Relationship & Family -->
-      <div class="bg-white rounded-xl p-6 sm:p-8 shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 sm:hover:-translate-y-2 border border-gray-100 md:col-span-2 lg:col-span-1">
-        <div class="w-10 sm:w-12 h-10 sm:h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-          <svg class="w-5 sm:w-6 h-5 sm:h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-          </svg>
-        </div>
-        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Relationships & Family</h3>
-        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Support for relationship challenges, family conflict, parenting issues, caregiving, and work-life balance.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Approach Section -->
-  <section class="mb-12 sm:mb-16 lg:mb-20">
+  <section class="py-16 sm:py-20 bg-gradient-to-br from-purple-50 to-teal-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl sm:rounded-3xl overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-0">
-          <!-- Content -->
-          <div class="lg:col-span-3 p-6 sm:p-8 lg:p-12 xl:p-16">
-            <div class="mb-6 sm:mb-8">
-              <span class="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-medium rounded-full mb-3 sm:mb-4">
-                My Approach
-              </span>
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Every Person's Journey is Unique</h2>
-              <div class="w-16 sm:w-20 h-1 bg-emerald-500 rounded-full mb-4 sm:mb-6"></div>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Services</h2>
+        <p class="text-lg text-gray-600">Tailored support for your unique journey</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Life Transitions Card -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-purple-100 hover:border-purple-200 transform hover:-translate-y-1">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
             </div>
-            
-            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-5 lg:p-6 shadow-sm border border-white/50 mb-6 sm:mb-8">
-              <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
-                I strive to create a safe, non-judgmental space where you can explore, gain insight and awareness while developing practical tools for meaninful change.
-              </p>
-            </div>
-            
-            <div class="space-y-4 sm:space-y-6">
-              <div class="flex items-start gap-3 sm:gap-4">
-                <div class="w-10 sm:w-12 h-10 sm:h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 sm:w-6 h-5 sm:h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Empathy</h3>
-                  <p class="text-sm sm:text-base text-gray-600">Understanding your perspective with genuine care and compassion</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3 sm:gap-4">
-                <div class="w-10 sm:w-12 h-10 sm:h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 sm:w-6 h-5 sm:h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Evidence-Based</h3>
-                  <p class="text-sm sm:text-base text-gray-600">Using proven therapeutic methods tailored to your specific needs</p>
-                </div>
-              </div>
-              
-              <div class="flex items-start gap-3 sm:gap-4">
-                <div class="w-10 sm:w-12 h-10 sm:h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 sm:w-6 h-5 sm:h-6 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2">Collaborative</h3>
-                  <p class="text-sm sm:text-base text-gray-600">Working together to achieve your mental health and wellness goals</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Visual Element -->
-          <div class="lg:col-span-2 bg-gradient-to-br from-emerald-600 to-teal-700 p-6 sm:p-8 lg:p-12 xl:p-16 flex items-center justify-center">
-            <div class="text-center text-white">
-              <div class="relative mb-6 sm:mb-8">
-                <div class="w-24 sm:w-28 lg:w-32 h-24 sm:h-28 lg:h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto backdrop-blur-sm border border-white/20">
-                  <svg class="w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
-                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a3 3 0 003 3h2a3 3 0 003-3V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zM8 7a1 1 0 012 0v4a1 1 0 11-2 0V7zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V7a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-                  </svg>
-                </div>
-                <!-- Floating elements - hidden on small mobile -->
-                <div class="hidden sm:block absolute -top-2 -right-2 w-4 sm:w-6 h-4 sm:h-6 bg-white/30 rounded-full"></div>
-                <div class="hidden sm:block absolute -bottom-4 -left-4 w-6 sm:w-8 h-6 sm:h-8 bg-white/20 rounded-full"></div>
-              </div>
-              <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Personalized Care</h3>
-              <p class="text-sm sm:text-base text-white/90 leading-relaxed px-2">
-                Your unique journey deserves a therapeutic approach that's designed specifically for you and your needs.
-              </p>
-            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Life Transitions</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Navigate major life changes with support through challenging transitions and 
+              new chapters in your journey.
+            </p>
           </div>
         </div>
+        
+        <!-- Mental Health Card -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-teal-100 hover:border-teal-200 transform hover:-translate-y-1">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Anxiety & Depression</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Evidence-based approaches to help manage anxiety, depression, and find emotional balance.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Relationships Card -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-blue-100 hover:border-blue-200 transform hover:-translate-y-1">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Relationships & Family</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Strengthen connections and navigate family dynamics with compassionate guidance.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional Services -->
+      <div class="mt-12 text-center">
+        <p class="text-gray-700 mb-4">
+          Also specializing in: <span class="font-medium">Burnout</span>, 
+          <span class="font-medium">Compassion Fatigue</span>, 
+          <span class="font-medium">Grief & Loss</span>, 
+          <span class="font-medium">Feeling Stuck</span>
+        </p>
+        <a href="/services" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors">
+          Learn More About Services
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Location & Contact -->
-  <section class="mb-16">
-    <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-lg border border-gray-100">
+  <!-- Location & Contact Section -->
+  <section class="py-16 sm:py-20 bg-gradient-to-br from-purple-50 to-teal-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Serving North Carolina</h2>
-          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-            I have in-person office hours in Raleigh, NC and provide telehealth sessions throught the State to meet your needs. Evening appointments and flexible scheduling available.
+          <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Serving North Carolina</h2>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            I have in-person office hours in Raleigh, NC and provide telehealth sessions throughout 
+            the State to meet your needs. Evening appointments and flexible scheduling available.
           </p>
           
           <div class="space-y-4">
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                 </svg>
               </div>
@@ -280,37 +212,37 @@ import Navigation from '../components/Navigation.astro';
             </div>
             
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                 </svg>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-900">Phone</h3>
-                <a href="tel:+19195787109" class="text-emerald-700 hover:text-emerald-800 transition-colors">(919) 578-7109</a>
+                <a href="tel:+19195787109" class="text-purple-600 hover:text-purple-700 transition-colors">(919) 578-7109</a>
               </div>
             </div>
             
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+              <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-900">Email</h3>
-                <a href="mailto:krabinstherapy@gmail.com" class="text-emerald-700 hover:text-emerald-800 transition-colors">krabinstherapy@gmail.com</a>
+                <a href="mailto:krabinstherapy@gmail.com" class="text-purple-600 hover:text-purple-700 transition-colors">krabinstherapy@gmail.com</a>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-8 text-center">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Your Journey?</h3>
+        <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to Begin Your Journey?</h3>
           <p class="text-gray-700 mb-6">Take the first step toward healing and personal growth.</p>
-          <a href="/contact" class="inline-block bg-emerald-700 text-white px-8 py-4 rounded-lg hover:bg-emerald-800 transition-all duration-300 hover:scale-105 shadow-lg font-semibold">
-            Schedule Your Consultation
+          <a href="/contact" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-full hover:bg-purple-700 transition-all duration-300 hover:scale-105 shadow-lg font-medium">
+            Schedule Consultation
           </a>
           <p class="text-sm text-gray-600 mt-4">Insurance accepted • Telehealth available</p>
         </div>
@@ -318,22 +250,5 @@ import Navigation from '../components/Navigation.astro';
     </div>
   </section>
 
-  <div slot="footer" class="space-y-4">
-    <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-      <div class="text-center sm:text-left">
-        <h3 class="font-bold text-gray-900 mb-1">Karen Rabins, LCSW</h3>
-        <p class="text-gray-600">Licensed Clinical Social Worker • Raleigh, NC 27613</p>
-      </div>
-      <div class="flex gap-6">
-        <a href="/" class="hover:text-emerald-700 transition-colors">Home</a>
-        <a href="/about" class="hover:text-emerald-700 transition-colors">About</a>
-        <a href="/services" class="hover:text-emerald-700 transition-colors">Services</a>
-        <a href="/contact" class="hover:text-emerald-700 transition-colors">Contact</a>
-      </div>
-    </div>
-    <div class="border-t border-gray-200 pt-4">
-      <p class="text-sm">&copy; 2025 Karen Rabins, LCSW. All rights reserved.</p>
-      <p class="text-sm mt-1 font-medium text-emerald-700">Free 15-minute consultation available.</p>
-    </div>
-  </div>
+  <Footer slot="footer" />
 </BaseLayout>
