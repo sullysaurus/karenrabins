@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+/* Force font loading for therapeutic warmth */
+* {
+  font-family: 'Work Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+html, body {
+  font-family: 'Work Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* Typography hierarchy - all headers use Quicksand */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Force paragraphs to use Work Sans */
+p, span, div, a, li, td, th {
+  font-family: 'Work Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
