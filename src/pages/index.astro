@@ -43,70 +43,75 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <!-- About Section with Headshot -->
-  <section class="py-16 sm:py-20 bg-gradient-to-br from-white via-purple-50/30 to-teal-50/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Centered Image and Name -->
-      <div class="text-center mb-12">
-        <div class="relative inline-block mb-8">
-          <!-- Decorative blob background -->
-          <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-teal-100 rounded-full filter blur-2xl opacity-60 scale-110"></div>
-          <!-- Image container -->
-          <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden border-8 border-white shadow-2xl">
-            <img 
-              src="/headshot.png" 
-              alt="Karen Rabins, LCSW"
-              class="w-full h-full object-cover"
-              loading="eager"
-            />
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <!-- Image Side -->
+        <div class="text-center lg:text-left">
+          <div class="relative inline-block mb-8">
+            <!-- Decorative blob background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-teal-100 rounded-full filter blur-2xl opacity-40 scale-110"></div>
+            <!-- Image container -->
+            <div class="relative w-80 h-80 mx-auto lg:mx-0 rounded-full overflow-hidden shadow-lg">
+              <img 
+                src="/headshot.png" 
+                alt="Karen Rabins, LCSW"
+                class="w-full h-full object-cover"
+                loading="eager"
+              />
+            </div>
           </div>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">Karen Rabins, LCSW</h2>
-        <p class="text-lg text-purple-600">Licensed Clinical Social Worker</p>
-      </div>
-      
-      <!-- Bio Content in Centered Cards -->
-      <div class="max-w-4xl mx-auto space-y-8">
-        <div class="bg-gradient-to-br from-purple-50 to-teal-50 rounded-2xl p-8">
-          <p class="text-lg text-gray-700 leading-relaxed text-center">
-            Welcome to my website. I'm glad you're here. I'm Karen Rabins, a Licensed Clinical Social Worker (LCSW) 
-            specializing in work with adults and seniors. With 30+ years of experience working in health care, 
-            mental health, school and corporate settings with people of all ages, I have a respectful understanding 
-            of the challenges and beauty of being human.
-          </p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
-            <p class="text-gray-700 leading-relaxed">
-              I specialize in addressing life transitions, anxiety, depression, family challenges, burnout, 
-              compassion fatigue, sadness and loneliness, grief/loss, and just feeling stuck. I love what I do. 
-              It's a privilege to be a part of each person's journey.
-            </p>
-          </div>
-          
-          <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100">
-            <p class="text-gray-700 leading-relaxed">
-              I believe that healing happens in relationships built on trust, respect, and genuine care. 
-              Every person has the capacity for growth and change, and sometimes we just need the right 
-              support and tools to unlock that potential.
-            </p>
+          <div class="lg:text-left text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-3">Karen Rabins, LCSW</h2>
+            <p class="text-xl text-purple-600 font-medium mb-8">Licensed Clinical Social Worker</p>
+            
+            <!-- Features -->
+            <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 justify-center lg:justify-start">
+              <div class="flex items-center gap-2 text-purple-700 justify-center lg:justify-start">
+                <div class="w-2 h-2 bg-purple-600 rounded-full"></div>
+                <span class="font-medium text-sm">Telehealth & In-Person Available</span>
+              </div>
+              <div class="flex items-center gap-2 text-teal-700 justify-center lg:justify-start">
+                <div class="w-2 h-2 bg-teal-600 rounded-full"></div>
+                <span class="font-medium text-sm">Blue Cross Blue Shield, Aetna Accepted</span>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div class="bg-white rounded-2xl p-8 shadow-md border border-purple-100 text-center">
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
-            I strive to create a safe, non-judgmental space where you can explore, gain insight and awareness, 
-            and learn practical skills to create meaningful change.
-          </p>
-          
-          <!-- Features -->
-          <div class="flex flex-col sm:flex-row gap-3 justify-center">
-            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">
-              ✓ Telehealth and In-Person Available
-            </span>
-            <span class="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-medium">
-              ✓ Insurances Accepted: Blue Cross Blue Shield, Aetna
-            </span>
+        <!-- Content Side -->
+        <div class="space-y-8">
+          <div>
+            <p class="text-2xl text-purple-700 font-light italic mb-8">
+              "Welcome to my website. I'm glad you're here."
+            </p>
+            
+            <div class="prose prose-lg max-w-none">
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                I'm Karen Rabins, a Licensed Clinical Social Worker specializing in work with adults and seniors. 
+                With 30+ years of experience working in health care, mental health, school and corporate settings 
+                with people of all ages, I have a respectful understanding of the challenges and beauty of being human.
+              </p>
+              
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                I specialize in addressing <span class="font-semibold text-gray-800">life transitions, anxiety, depression, family challenges, 
+                burnout, compassion fatigue, sadness and loneliness, grief/loss, and just feeling stuck</span>. I love what I do. 
+                It's a privilege to be a part of each person's journey.
+              </p>
+              
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                I believe that <span class="font-semibold text-gray-800">healing happens in relationships</span> built on trust, respect, and genuine care. 
+                Every person has the capacity for growth and change, and sometimes we just need the right 
+                support and tools to unlock that potential.
+              </p>
+              
+              <blockquote class="border-l-4 border-purple-300 pl-6 my-8">
+                <p class="text-xl text-gray-700 leading-relaxed italic">
+                  "I strive to create a safe, non-judgmental space where you can explore, 
+                  gain insight and awareness, and learn practical skills to create meaningful change."
+                </p>
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>
