@@ -14,11 +14,11 @@ import Footer from '../components/Footer.astro';
   </div>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 w-full">
+  <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-sky-50 to-cyan-50 w-full">
     <!-- Decorative background elements -->
-    <div class="absolute inset-0 opacity-30">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-teal-200 rounded-full filter blur-3xl"></div>
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-sky-200 rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-200 rounded-full filter blur-3xl"></div>
     </div>
     
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
@@ -32,27 +32,25 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <!-- About Section with Headshot -->
-  <section class="py-20 bg-white w-full">
+  <section class="py-20 bg-gradient-to-br from-white via-sky-50/20 to-cyan-50/20 w-full">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-start">
         <!-- Image Side -->
         <div class="text-center lg:text-left">
           <div class="relative inline-block mb-8">
-            <!-- Decorative blob background -->
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-100 to-teal-100 rounded-full filter blur-2xl opacity-40 scale-110"></div>
             <!-- Image container -->
-            <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto lg:mx-0 rounded-full overflow-hidden shadow-lg">
+            <div class="relative w-64 sm:w-72 lg:w-80 mx-auto lg:mx-0 rounded-2xl overflow-hidden shadow-xl">
               <img 
                 src="/headshot.png" 
                 alt="Karen Rabins, LCSW"
-                class="w-full h-full object-cover"
+                class="w-full h-auto object-contain"
                 loading="eager"
               />
             </div>
           </div>
           <div class="lg:text-left text-center">
             <h2 class="text-4xl font-bold text-gray-800 mb-3">Karen Rabins, LCSW</h2>
-            <p class="text-xl text-purple-600 font-medium mb-8">Licensed Clinical Social Worker</p>
+            <p class="text-xl text-sky-600 font-medium mb-8">Licensed Clinical Social Worker</p>
                
           </div>
         </div>
@@ -60,35 +58,29 @@ import Footer from '../components/Footer.astro';
         <!-- Content Side -->
         <div class="space-y-8">
           <div>
-            <p class="text-2xl text-purple-700 font-light italic mb-8">
-              "Welcome to my website. I'm glad you're here."
+            <p class="text-2xl text-sky-700 font-light italic mb-8">
+              Welcome to my website.
             </p>
             
             <div class="prose prose-lg max-w-none">
               <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                I'm Karen Rabins, a Licensed Clinical Social Worker specializing in work with adults and seniors. 
-                With 30+ years of experience working in health care, mental health, school and corporate settings 
-                with people of all ages, I have a respectful understanding of the challenges and beauty of being human.
+                I'm Karen Rabins, and I've been a therapist for over 30 years. My journey began when I discovered my passion for helping others navigate life's challenges. Having worked in healthcare, mental health, school, and corporate settings with people of all ages, I've come to deeply appreciate both the struggles and the remarkable resilience that make us human.
               </p>
               
               <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                I specialize in addressing <span class="font-semibold text-gray-800">life transitions, anxiety, depression, family challenges, 
-                burnout, compassion fatigue, sadness and loneliness, grief/loss, and just feeling stuck</span>. I love what I do. 
-                It's a privilege to be a part of each person's journey.
+                Over the years, I've found that my work naturally centers around life transitions, anxiety, depression, family challenges, burnout, compassion fatigue, sadness and loneliness, grief and loss, and that universal feeling of being stuck. Each person who walks through my door brings their own unique story, and it continues to be a privilege to be part of their journey toward healing and growth.
               </p>
               
               <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                I believe that <span class="font-semibold text-gray-800">healing happens in relationships</span> built on trust, respect, and genuine care. 
-                Every person has the capacity for growth and change, and sometimes we just need the right 
-                support and tools to unlock that potential.
+                Through my practice, I've seen time and again that healing happens in relationships—those built on trust, respect, and genuine care. I believe every person has an innate capacity for growth and change. Sometimes, all we need is the right support and practical tools to unlock that potential and create meaningful change in our lives.
               </p>
               
-              <blockquote class="border-l-4 border-purple-300 pl-6 my-8">
+              <div class="bg-gradient-to-r from-sky-50 to-cyan-50 rounded-xl p-6 my-8">
                 <p class="text-xl text-gray-700 leading-relaxed italic">
-                  "I strive to create a safe, non-judgmental space where you can explore, 
-                  gain insight and awareness, and learn practical skills to create meaningful change."
+                  I strive to create a safe, non-judgmental space where you can explore, 
+                  gain insight and awareness, and learn practical skills to create meaningful change.
                 </p>
-              </blockquote>
+              </div>
             </div>
           </div>
         </div>
@@ -97,7 +89,7 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <!-- Services Section -->
-  <section class="py-16 sm:py-20 bg-gradient-to-br from-purple-50 to-teal-50 w-full">
+  <section class="py-16 sm:py-20 bg-gradient-to-br from-sky-100/50 to-cyan-100/50 w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Services</h2>
@@ -106,10 +98,10 @@ import Footer from '../components/Footer.astro';
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Life Transitions Card -->
-        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-purple-100 hover:border-purple-200 transform hover:-translate-y-1">
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-sky-100/50 hover:border-sky-200/50 transform hover:-translate-y-1">
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
             </div>
@@ -122,10 +114,10 @@ import Footer from '../components/Footer.astro';
         </div>
         
         <!-- Mental Health Card -->
-        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-teal-100 hover:border-teal-200 transform hover:-translate-y-1">
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-cyan-100 hover:border-cyan-200 transform hover:-translate-y-1">
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
               </svg>
             </div>
@@ -137,10 +129,10 @@ import Footer from '../components/Footer.astro';
         </div>
         
         <!-- Relationships Card -->
-        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-blue-100 hover:border-blue-200 transform hover:-translate-y-1">
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-sky-100/50 hover:border-sky-200/50 transform hover:-translate-y-1">
           <div class="text-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-16 h-16 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
               </svg>
             </div>
@@ -160,7 +152,7 @@ import Footer from '../components/Footer.astro';
           <span class="font-medium">Grief & Loss</span>, 
           <span class="font-medium">Feeling Stuck</span>
         </p>
-        <a href="/services" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors">
+        <a href="/services" class="inline-flex items-center text-sky-600 hover:text-sky-700 font-medium transition-colors">
           Learn More About Services
           <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>

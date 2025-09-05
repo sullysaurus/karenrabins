@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Treatment Approaches - Karen Rabins, LCSW" 
+  description="Evidence-based therapeutic approaches including CBT, mindfulness, EMDR, and Ketamine Assisted Psychotherapy (KAP) in Raleigh, NC."
+  keywords="treatment approaches, CBT, mindfulness therapy, EMDR, ketamine therapy, psychodynamic therapy, Raleigh NC"
+>
+  <div slot="nav">
+    <Navigation currentPage="treatment" />
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 opacity-20">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-sky-200 rounded-full filter blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-200 rounded-full filter blur-3xl"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+          Treatment Approaches
+        </h1>
+        <p class="text-xl text-sky-700 font-light italic">
+          Evidence-based, personalized therapy tailored to your unique needs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment Approaches -->
+  <section class="py-16 sm:py-20 bg-gradient-to-br from-sky-50/20 via-white to-cyan-50/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">My Therapeutic Approach</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          I use an eclectic, personalized approach that draws on multiple evidence-based therapies:
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Cognitive Behavioral Therapy (CBT)</h3>
+              <p class="text-gray-600 text-sm">Evidence-based approach to changing negative thought patterns</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Positive Psychology</h3>
+              <p class="text-gray-600 text-sm">Focus on strengths, resilience, and well-being</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Mindfulness-Based Approaches</h3>
+              <p class="text-gray-600 text-sm">Present-moment awareness and stress reduction techniques</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Psychodynamic Therapy</h3>
+              <p class="text-gray-600 text-sm">Exploring unconscious processes and past experiences</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Strengths-Based Approach</h3>
+              <p class="text-gray-600 text-sm">Building on your existing strengths and resources</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Person-Centered Therapy</h3>
+              <p class="text-gray-600 text-sm">Respect, empathy, and unconditional positive regard</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">EMDR</h3>
+              <p class="text-gray-600 text-sm">Eye Movement Desensitization and Reprocessing for trauma</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Motivational Interviewing</h3>
+              <p class="text-gray-600 text-sm">Supporting motivation and commitment to change</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Compassion-Focused Therapy</h3>
+              <p class="text-gray-600 text-sm">Developing self-compassion and emotional regulation</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-cyan-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-800">Reality Therapy</h3>
+              <p class="text-gray-600 text-sm">Focus on present choices and personal responsibility</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ketamine Therapy Section -->
+  <section class="py-16 sm:py-20 bg-gradient-to-br from-sky-50 to-cyan-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">
+          Ketamine Assisted Psychotherapy (KAP)
+        </h2>
+        
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg mb-8">
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            I work in collaboration with your psychiatric provider after you and your provider have determined 
+            that Ketamine is the right option for you. As a trained Ketamine Assisted Psychotherapist, I provide 
+            specialized support during treatment. In follow-up therapy sessions, I help you process your experience 
+            and insights, maintaining and building upon treatment progress.
+          </p>
+        </div>
+        
+        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 mb-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">What is Ketamine Therapy?</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Ketamine therapy is an evidence-based approach to treating mental health conditions that haven't 
+            responded to traditional treatments. Unlike conventional antidepressants that target serotonin, 
+            ketamine works on the brain's glutamate system, promoting new neural connections and offering 
+            rapid relief for many patients.
+          </p>
+        </div>
+        
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100/50 text-center">
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            The addition of Ketamine to the process of therapy can provide significant results for 
+            <span class="font-semibold text-sky-700">55% - 70%</span> of those challenged with 
+            treatment-resistant depression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Quote -->
+  <section class="py-16 sm:py-20 bg-gradient-to-r from-sky-500 to-cyan-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <blockquote class="text-2xl sm:text-3xl text-white font-light italic mb-8 leading-relaxed">
+        I support each person's unique journey with respect, presence, honesty, and a little humor.
+      </blockquote>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
