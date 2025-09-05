@@ -12,11 +12,11 @@ export interface Props {
 
 const { 
   title, 
-  description = "Compassionate mental health care with Karin Rabins, Licensed Clinical Psychologist in Raleigh, NC", 
+  description = "Compassionate mental health care with Karen Rabins, Licensed Clinical Social Worker in Raleigh, NC", 
   image = "/favicon.svg", 
   canonicalURL,
-  keywords = "psychologist Raleigh NC, therapist Raleigh, anxiety therapy, depression counseling, ketamine therapy, EMDR therapy, trauma therapy, couples counseling, mental health Raleigh",
-  author = "Karin Rabins, Licensed Clinical Psychologist"
+  keywords = "therapist Raleigh NC, LCSW, anxiety therapy, depression counseling, life transitions therapy, mental health Raleigh",
+  author = "Karen Rabins, Licensed Clinical Social Worker"
 } = Astro.props;
 
 const currentURL = canonicalURL || new URL(Astro.url.pathname, Astro.site);
@@ -54,7 +54,7 @@ const fullImageURL = new URL(image, Astro.url).toString();
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Karin Rabins Therapy" />
+  <meta property="og:site_name" content="Karen Rabins Therapy" />
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -62,9 +62,9 @@ const fullImageURL = new URL(image, Astro.url).toString();
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={fullImageURL} />
-  <meta name="twitter:image:alt" content="Karin Rabins Therapy - Mental Health Services in Raleigh, NC" />
-  <meta name="twitter:creator" content="@KarinRabinsTherapy" />
-  <meta name="twitter:site" content="@KarinRabinsTherapy" />
+  <meta name="twitter:image:alt" content="Karen Rabins Therapy - Mental Health Services in Raleigh, NC" />
+  <meta name="twitter:creator" content="@KarenRabinsTherapy" />
+  <meta name="twitter:site" content="@KarenRabinsTherapy" />
   
   <!-- Google Fonts - Quicksand, Work Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,20 +74,20 @@ const fullImageURL = new URL(image, Astro.url).toString();
   <!-- Favicon and Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
-  <link rel="mask-icon" href="/favicon.svg" color="#6b9080" />
-  <meta name="theme-color" content="#6b9080" />
-  <meta name="msapplication-TileColor" content="#6b9080" />
+  <link rel="mask-icon" href="/favicon.svg" color="#0ea5e9" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="msapplication-TileColor" content="#0ea5e9" />
   
   <!-- Schema.org JSON-LD for Local Business -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
-      "@id": "https://karinrabinstherapy.com/#organization",
-      "name": "Karin Rabins Therapy",
-      "description": "Licensed Clinical Psychologist providing compassionate mental health care, anxiety therapy, depression counseling, trauma therapy, and ketamine therapy in Raleigh, North Carolina.",
-      "url": "https://karinrabinstherapy.com",
-      "telephone": "+19197073347",
+      "@id": "https://karenrabinstherapy.com/#organization",
+      "name": "Karen Rabins Therapy",
+      "description": "Licensed Clinical Social Worker providing compassionate mental health care, anxiety therapy, depression counseling, trauma therapy, and life transitions support in Raleigh, North Carolina.",
+      "url": "https://karenrabinstherapy.com",
+      "telephone": "+19195787109",
       "email": "krabinstherapy@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -105,33 +105,29 @@ const fullImageURL = new URL(image, Astro.url).toString();
         "name": "Raleigh, North Carolina"
       },
       "medicalSpecialty": [
-        "Clinical Psychology",
+        "Clinical Social Work",
         "Anxiety Therapy",
         "Depression Counseling",
-        "Trauma Therapy",
-        "Ketamine Therapy",
-        "Couples Therapy"
+        "Life Transitions Therapy",
+        "Family Therapy"
       ],
       "priceRange": "$$",
       "paymentAccepted": "Cash, Credit Card, Insurance",
       "currenciesAccepted": "USD",
       "founder": {
         "@type": "Person",
-        "name": "Karin Rabins",
-        "jobTitle": "Licensed Clinical Psychologist",
-        "telephone": "+19197073347",
+        "name": "Karen Rabins",
+        "jobTitle": "Licensed Clinical Social Worker",
+        "telephone": "+19195787109",
         "email": "krabinstherapy@gmail.com"
       },
-      "sameAs": [
-        "https://www.psychologytoday.com/us/therapists/karen-lynn-rabins-raleigh-nc/1314131"
-      ],
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "Professional License",
-        "name": "Licensed Clinical Psychologist",
+        "name": "Licensed Clinical Social Worker",
         "recognizedBy": {
           "@type": "Organization",
-          "name": "North Carolina Psychology Board"
+          "name": "North Carolina Social Work Certification and Licensure Board"
         }
       }
     }
@@ -142,35 +138,34 @@ const fullImageURL = new URL(image, Astro.url).toString();
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Karin Rabins Therapy",
+      "name": "Karen Rabins Therapy",
       "description": {JSON.stringify(description)},
       "url": {JSON.stringify(currentURL.toString())},
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://karinrabinstherapy.com/search?q={search_term_string}"
+          "urlTemplate": "https://karenrabinstherapy.com/search?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
     }
   </script>
 </head>
-<body class="min-h-screen flex flex-col bg-gray-50 text-gray-900 antialiased" style="font-family: 'Work Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;">
-  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<body class="min-h-screen flex flex-col bg-white text-gray-900 antialiased">
+  <!-- Skip Link for Accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <header class="bg-white sticky top-0 z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
       <slot name="nav" />
-    </nav>
+    </div>
   </header>
   
-  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+  <main id="main" class="flex-1 w-full">
     <slot />
   </main>
   
-  <footer class="bg-white border-t border-gray-200 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-gray-600">
-      <slot name="footer" />
-    </div>
-  </footer>
+  <slot name="footer" />
 </body>
 </html>

@@ -13,62 +13,69 @@ import Footer from '../components/Footer.astro';
     <Navigation currentPage="about" />
   </div>
 
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50">
-    <!-- Decorative background elements -->
-    <div class="absolute inset-0 opacity-20">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-sky-200 rounded-full filter blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-96 h-96 bg-cyan-200 rounded-full filter blur-3xl"></div>
-    </div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-      <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
-          About Me
-        </h1>
-        <p class="text-xl text-sky-700 font-light italic">
-          Karen Lynn Rabins, LCSW
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Bio Section -->
-  <section class="py-16 sm:py-20 bg-gradient-to-br from-sky-50/20 via-white to-cyan-50/20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="space-y-6">
-        <div>
-          <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">My Story</h2>
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
-            I grew up and lived in New York City until I moved to Raleigh in 2001. I have a Bachelor of Science 
-            in Human Development and Family Studies from Cornell University (5/1980). I earned a Master's Degree in Social Work from New York University 
-            (5/1986). Over my long career, I have actively pursued ongoing professional training to stay current 
-            with neuroscience, therapeutic modalities, and our understanding of mental health and wellness. 
-            I emphasize the importance of self-care, which includes attention to emotional, physical, social 
-            and spiritual well-being, sleep, diet, and exercise.
+  <!-- About Section -->
+  <section class="py-16 sm:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 animate-fade-in-up">
+            About Me
+          </h1>
+          <p class="text-lg sm:text-xl text-sky-600 font-medium mb-8 animate-fade-in-up" style="animation-delay: 0.2s">
+            Karen Lynn Rabins, LCSW
           </p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">My Story</h2>
+        </div>
+        
+        <!-- Content -->
+        <div class="animate-on-scroll">
           
-          <p class="text-lg text-gray-700 leading-relaxed">
-            I love what I do and feel privileged to hear clients' stories and help them discover a more 
-            empowered, contented version of themselves. I'm a lifelong learner, enjoy all kinds of crafts, 
-            and as a lover of stories, an avid reader and movie fan. Most treasured is time with family and friends.
-          </p>
+          <div class="space-y-6">
+            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+              I grew up and lived in New York City until I moved to Raleigh in 2001. I have a Bachelor of Science 
+              in Human Development and Family Studies from Cornell University. I earned a Master's Degree 
+              in Social Work from New York University. Over my long career, I have actively pursued ongoing 
+              professional training to stay current with neuroscience, therapeutic modalities, and our understanding 
+              of mental health and wellness. I emphasize the importance of self-care, which includes attention to 
+              emotional, physical, social and spiritual well-being, sleep, diet, and exercise.
+            </p>
+            
+            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+              As a Licensed Clinical Social Worker in North Carolina with over 30 years in mental health practice, 
+              I love what I do and feel privileged to hear clients' stories and help them discover a more 
+              empowered, contented version of themselves. I'm a lifelong learner, enjoy all kinds of crafts, 
+              and as a lover of stories, an avid reader and movie fan. Most treasured is time with family and friends.
+            </p>
+          </div>
+          
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Professional Note Section -->
-  <section class="py-12 bg-gradient-to-br from-sky-100/30 to-cyan-100/30">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
-        <p class="text-gray-700 font-medium">
-          Note: Karen Lynn Rabins, LCSW is a Licensed Clinical Social Worker practicing in North Carolina.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
   <Footer slot="footer" />
 </BaseLayout>
+
+<!-- Intersection Observer for Scroll Animations -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all elements with animation classes
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>
